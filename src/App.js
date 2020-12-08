@@ -21,14 +21,14 @@ function App() {
       <Container maxWidth="sm">
         <Router>
           {/* <Route path='/' ><Redirect to='/cesar'></Redirect></Route> */}
-          <Route path='/cesar'>
+          <Route path='../cesar'>
             
             <Cesar></Cesar>
           </Route>
-          <Route path='/vigenere'>
+          <Route path='./vigenere'>
             <Vigenere></Vigenere>
           </Route>
-          <Route path='/playfair'>
+          <Route path='/cipher/playfair'>
             <Playfair></Playfair>
           </Route>
         </Router>
