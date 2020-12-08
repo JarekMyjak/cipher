@@ -12,27 +12,27 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(0),
   },
   title: {
     flexGrow: 1,
   },
 }));
 
-export default function ButtonAppBar() {
+export default function ButtonAppBar({title}) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
           <Typography variant="h6" className={classes.title}>
-            News
+          Cipher Site
           </Typography>
-          <Button color="inherit">Login</Button>
+
+          <Button color="inherit" href="/cesar">Cesar</Button>
+          <Button color="inherit" href="/playfair">Playfair</Button>
+          <Button color="inherit" href="/vigenere">Vigenere</Button>
         </Toolbar>
       </AppBar>
     </div>
