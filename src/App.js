@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link,
@@ -17,23 +17,24 @@ import { Playfair } from './components/Playfair'
 function App() {
   return (
     <div className="App">
+      <Router basename="/cipher">
       <ButtonAppBar></ButtonAppBar>
       <Container maxWidth="sm">
-        <p>test</p>
-        <Router>
+        
           {/* <Route path='/' ><Redirect to='/cesar'></Redirect></Route> */}
-          <Route path='../cesar'>
+          <Route path='/cesar'>
             
             <Cesar></Cesar>
           </Route>
-          <Route path='./vigenere'>
+          <Route path='/vigenere'>
             <Vigenere></Vigenere>
           </Route>
-          <Route path='/cipher/playfair'>
+          <Route path='/playfair'>
             <Playfair></Playfair>
           </Route>
-        </Router>
+        
       </Container>
+      </Router>
     </div>
   );
 }

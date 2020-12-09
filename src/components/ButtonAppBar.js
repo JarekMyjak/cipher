@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import Link from 'react-router-dom/Link'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,10 +30,9 @@ export default function ButtonAppBar({title}) {
           <Typography variant="h6" className={classes.title}>
           Cipher Site
           </Typography>
-
-          <Button color="inherit" href="/cesar">Cesar</Button>
-          <Button color="inherit" href="/playfair">Playfair</Button>
-          <Button color="inherit" href="/vigenere">Vigenere</Button>
+          <Button color="inherit" component={Link} to="/cesar">Cesar</Button>
+          <Button color="inherit" component={Link} to="/playfair">Playfair</Button>
+          <Button color="inherit" component={Link} to="/vigenere">Vigenere</Button>
         </Toolbar>
       </AppBar>
     </div>
